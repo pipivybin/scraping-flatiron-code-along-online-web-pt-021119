@@ -10,14 +10,14 @@ class Scraper
     doc = Nokogiri::HTML(html)
   end
 
-  Scraper.new.get_page
+
 
   # def get_courses
   #   html = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
   #   doc = Nokogiri::HTML(html)
   #   doc.css("h2").each {|x| puts x}
   # end
-  # 
+  #
   # def make_courses
   #   self.get_courses.each.tap { |x|
   #   obj = Course.new
@@ -36,3 +36,5 @@ class Scraper
   # end
 
 end
+
+Scraper.new.get_page
