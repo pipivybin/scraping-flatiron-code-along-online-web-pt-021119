@@ -20,7 +20,7 @@ class Scraper
       course.title = x.css("h2").text
       course.schedule = x.css(".date").text
       course.description = x.css("p").text
-      
+
     end
   end
 
@@ -36,3 +36,5 @@ class Scraper
   end
 
 end
+
+Scraper.new.print_courses
