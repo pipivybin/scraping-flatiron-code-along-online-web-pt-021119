@@ -11,13 +11,11 @@ class Scraper
     binding.pry
   end
 
-
-
-  # def get_courses
-  #   html = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
-  #   doc = Nokogiri::HTML(html)
-  #   doc.css("h2").each {|x| puts x}
-  # end
+  def get_courses
+    html = open("http://learn-co-curriculum.github.io/site-for-scraping/courses")
+    doc = Nokogiri::HTML(html)
+    doc.css(".post").each {|x| x.css("h2").text}
+  end
   #
   # def make_courses
   #   self.get_courses.each.tap { |x|
