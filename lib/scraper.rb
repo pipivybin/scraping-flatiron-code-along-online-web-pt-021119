@@ -14,6 +14,7 @@ class Scraper
       course.schedule = x.css(".date").text
       course.description = x.css("p").text
     }
+    binding.pry
   end
 
   def get_courses
